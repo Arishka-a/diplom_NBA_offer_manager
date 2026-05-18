@@ -1,0 +1,118 @@
+.filter-panel {
+  background: var(--background-white);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.filter-header {
+  padding: 0;
+}
+
+.filter-toggle {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: background 0.2s;
+}
+
+.filter-toggle:hover {
+  background: var(--background-light);
+}
+
+.filter-icon {
+  font-size: 16px;
+  color: var(--text-medium);
+}
+
+.filter-badge {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: auto;
+  line-height: 18px;
+}
+
+.toggle-arrow {
+  font-size: 12px;
+  transition: transform 0.2s;
+  margin-left: auto;
+  color: var(--text-light);
+}
+
+.filter-badge + .toggle-arrow {
+  margin-left: 8px;
+}
+
+.toggle-arrow.up {
+  transform: rotate(180deg);
+}
+
+.filter-content {
+  padding: 16px;
+  border-top: 1px solid var(--border-color-light);
+  background: var(--background-white);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-medium);
+}
+
+.filter-select,
+.filter-input {
+  padding: 4px 11px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  background: var(--background-white);
+  height: 32px;
+  color: var(--text-dark);
+  transition: all 0.2s;
+}
+
+.filter-select:hover,
+.filter-input:hover {
+  border-color: var(--primary-blue);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color-light);
+}

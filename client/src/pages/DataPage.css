@@ -1,0 +1,343 @@
+/* Стили страниц с данными — стиль Ant Design */
+.data-page {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Переключатель режима */
+.view-toggle {
+  display: flex;
+  background: var(--background-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  gap: 0;
+}
+
+.view-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-toggle-btn:hover {
+  color: var(--primary-blue);
+}
+
+.view-toggle-btn.active {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.page-loading,
+.page-error {
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.page-error {
+  color: var(--status-error);
+}
+
+/* Контейнер таблицы */
+.data-table-container {
+  background: var(--background-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color-light);
+}
+
+.data-table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: collapse;
+}
+
+.data-table thead {
+  background: var(--background-light);
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-medium);
+  white-space: nowrap;
+  background: var(--background-light);
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.data-table td {
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-light);
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.data-table td .channels-list {
+  justify-content: flex-start;
+}
+
+.data-table th.col-title,
+.data-table td.col-title {
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.data-table th.col-hardware,
+.data-table td.col-hardware {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.data-table td.col-hardware .hardware-code {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.data-table th.col-channels,
+.data-table td.col-channels {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  white-space: normal;
+}
+
+.data-table td.col-channels .channels-list {
+  max-width: 100%;
+}
+
+.data-table tbody tr {
+  transition: background 0.15s;
+}
+
+.data-table tbody tr:hover {
+  background: var(--background-light);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-light);
+  padding: 60px 20px !important;
+  font-size: 14px;
+}
+
+/* Бейджи (Tag в стиле Ant Design) */
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  line-height: 20px;
+}
+
+.badge-info {
+  background: #e6f4ff;
+  color: #0958d9;
+  border-color: #91caff;
+}
+
+.badge-active {
+  background: var(--status-active-bg);
+  color: #237804;
+  border-color: var(--status-active-border);
+}
+
+.badge-inactive {
+  background: var(--status-inactive-bg);
+  color: var(--text-medium);
+  border-color: var(--status-inactive-border);
+}
+
+.badge-draft {
+  background: var(--status-draft-bg);
+  color: var(--status-draft);
+  border-color: var(--border-color);
+}
+
+.badge-archived {
+  background: var(--status-action-bg);
+  color: #ad4e00;
+  border-color: var(--status-action-border);
+}
+
+.badge-create {
+  background: var(--status-active-bg);
+  color: #237804;
+  border-color: var(--status-active-border);
+}
+
+.badge-update {
+  background: var(--status-action-bg);
+  color: #ad4e00;
+  border-color: var(--status-action-border);
+}
+
+.badge-delete {
+  background: var(--status-error-bg);
+  color: var(--status-error);
+  border-color: var(--status-error-border);
+}
+
+/* Кнопки действий — иконки в чёрно-белом стиле */
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+  margin: 0 2px;
+  border-radius: var(--radius-sm);
+  color: var(--text-medium);
+  width: 28px;
+  height: 28px;
+  line-height: 1;
+}
+
+.btn-action:hover {
+  color: var(--text-dark);
+  border-color: var(--text-medium);
+  background: var(--background-light);
+}
+
+.btn-action svg {
+  display: block;
+}
+
+/* Основная кнопка */
+.btn-primary {
+  padding: 6px 16px;
+  background: var(--primary-blue);
+  color: white;
+  border: 1px solid var(--primary-blue);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 32px;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background: var(--primary-blue-light);
+  border-color: var(--primary-blue-light);
+}
+
+.btn-primary:active {
+  background: var(--primary-blue-dark);
+  border-color: var(--primary-blue-dark);
+}
+
+/* Чипы каналов */
+.channels-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 180px;
+}
+
+.channel-chip {
+  display: inline-block;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 400;
+  background: #e6f4ff;
+  color: #0958d9;
+  border: 1px solid #91caff;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  line-height: 18px;
+}
+
+.discount-badge {
+  display: inline-block;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 400;
+  background: var(--status-action-bg);
+  color: #ad4e00;
+  border: 1px solid var(--status-action-border);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  line-height: 18px;
+}
+
+.product-code,
+.hardware-code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 12px;
+  color: var(--text-medium);
+  background: var(--background-light);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color-light);
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--text-light);
+}
+
+.text-center {
+  text-align: center;
+}

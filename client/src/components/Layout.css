@@ -1,0 +1,23 @@
+.layout {
+  min-height: 100vh;
+  background: var(--background-main);
+}
+
+.layout-content {
+  margin-left: 240px;
+  padding: 88px 24px 24px;
+  min-height: 100vh;
+  background: var(--background-main);
+  transition: margin-left 0.2s ease;
+}
+
+.layout.collapsed .layout-content {
+  margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .layout-content {
+    margin-left: 80px;
+    padding: 80px 16px 16px;
+  }
+}

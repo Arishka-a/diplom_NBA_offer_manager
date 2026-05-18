@@ -1,0 +1,82 @@
+/* Обёртка с двойной горизонтальной прокруткой (sticky сверху + обычная снизу) */
+.table-scroll-wrapper {
+  position: relative;
+}
+
+/* Верхний горизонтальный скроллбар — sticky под фиксированным topbar (64px) */
+.table-scroll-top {
+  position: sticky;
+  top: 64px;
+  z-index: 9;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 16px;
+  border-bottom: 1px solid var(--border-color-light);
+  background: var(--background-light);
+}
+
+.table-scroll-top::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-scroll-top::-webkit-scrollbar-thumb,
+.data-table-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+}
+
+.table-scroll-top::-webkit-scrollbar-thumb:hover,
+.data-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
+
+.table-scroll-top::-webkit-scrollbar-track,
+.data-table-scroll::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+.table-scroll-spacer {
+  height: 1px;
+}
+
+.data-table-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Оверлей залипшей шапки (управляется JS из TableScroll) — точно под sticky-скроллбаром */
+.table-sticky-header {
+  overflow: hidden;
+  z-index: 50;
+  background: var(--background-light);
+  border-bottom: 1px solid var(--border-color-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+}
+
+.table-sticky-header table {
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.table-sticky-header thead {
+  background: var(--background-light);
+}
+
+.table-sticky-header th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-medium);
+  white-space: nowrap;
+  background: var(--background-light);
+  border-bottom: 1px solid var(--border-color-light);
+  vertical-align: middle;
+  box-sizing: border-box;
+}

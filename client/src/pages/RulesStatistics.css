@@ -1,0 +1,351 @@
+.rules-statistics {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.statistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.statistics-header h1 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Сетка метрик */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.metric-card {
+  background: var(--background-white);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  border: 1px solid var(--border-color-light);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.metric-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: var(--text-medium);
+}
+
+/* Графики */
+.chart-container {
+  background: var(--background-white);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  border: 1px solid var(--border-color-light);
+  margin-bottom: 16px;
+}
+
+.chart-container h2 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.half-width {
+  margin-bottom: 0;
+}
+
+/* Таблица статистики */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.stats-table thead {
+  background: var(--background-light);
+}
+
+.stats-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-medium);
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.stats-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color-light);
+  color: var(--text-dark);
+}
+
+.stats-table tbody tr:hover {
+  background: var(--background-light);
+}
+
+/* Секция деталей правил */
+.rules-detail-section {
+  background: var(--background-white);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  border: 1px solid var(--border-color-light);
+}
+
+.rules-detail-section h2 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 1200px;
+}
+
+.rules-table thead {
+  background: var(--background-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rules-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-medium);
+  border-bottom: 1px solid var(--border-color-light);
+  white-space: nowrap;
+}
+
+.rules-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color-light);
+  color: var(--text-dark);
+}
+
+.rules-table tbody tr:hover {
+  background: var(--background-light);
+}
+
+.rule-name {
+  font-weight: 500;
+  color: var(--text-dark);
+  max-width: 200px;
+}
+
+/* Бейджи */
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  line-height: 20px;
+}
+
+.badge-priority_boost {
+  background: #e6f4ff;
+  color: #0958d9;
+  border-color: #91caff;
+}
+
+.badge-scoring {
+  background: #f9f0ff;
+  color: #531dab;
+  border-color: #d3adf7;
+}
+
+.badge-filtering {
+  background: var(--status-action-bg);
+  color: #ad4e00;
+  border-color: var(--status-action-border);
+}
+
+.badge-segmentation {
+  background: var(--status-active-bg);
+  color: #237804;
+  border-color: var(--status-active-border);
+}
+
+.badge-timing {
+  background: #fff0f6;
+  color: #c41d7f;
+  border-color: #ffadd2;
+}
+
+.badge-budget {
+  background: #e6fffb;
+  color: #006d75;
+  border-color: #87e8de;
+}
+
+.badge-frequency {
+  background: #feffe6;
+  color: #7cb305;
+  border-color: #eaff8f;
+}
+
+.badge-conversion {
+  background: #fcffe6;
+  color: #5b8c00;
+  border-color: #d3f261;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  line-height: 20px;
+}
+
+.status-badge.active {
+  background: var(--status-active-bg);
+  color: #237804;
+  border-color: var(--status-active-border);
+}
+
+.status-badge.inactive {
+  background: var(--status-error-bg);
+  color: var(--status-error);
+  border-color: var(--status-error-border);
+}
+
+/* Прогресс-бар */
+.progress-bar {
+  position: relative;
+  width: 100px;
+  height: 18px;
+  background: var(--background-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-color-light);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--status-active);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.text-success {
+  color: var(--status-active);
+  font-weight: 500;
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.loading,
+.error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: var(--text-medium);
+}
+
+.error-message {
+  color: var(--status-error);
+  background: var(--status-error-bg);
+  border: 1px solid var(--status-error-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+
+.btn {
+  padding: 4px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 32px;
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background: var(--primary-blue-light);
+  border-color: var(--primary-blue-light);
+}
+
+.btn-secondary {
+  background: var(--background-white);
+  color: var(--text-dark);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+  .statistics-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .table-responsive {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+}
