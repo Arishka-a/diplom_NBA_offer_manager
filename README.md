@@ -101,8 +101,6 @@ docker-compose up -d
 
 Adminer доступен на http://localhost:8080.
 
-Подробнее — в [`DOCKER_SETUP.md`](./DOCKER_SETUP.md).
-
 ### 5. Запуск приложения (dev-режим)
 
 ```bash
@@ -162,7 +160,7 @@ npm run dev
 
 ## Автор
 
-**Вахрушева Арина Владиславовна**
+**Вахрушева Арина Вячеславовна**
 Студентка ПНИПУ, направление «Разработка информационных систем»
 Telegram: [@arinaVah](https://t.me/arinaVah)
 
