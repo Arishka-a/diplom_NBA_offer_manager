@@ -2,7 +2,7 @@
   "name": "nba-offer-manager",
   "version": "1.0.0",
   "description": "NBA Offer Manager - система управления офферами Next Best Action",
-  "author": "Вахрушева Арина Владиславовна",
+  "author": "Вахрушева Арина Вячеславовна",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\"",
